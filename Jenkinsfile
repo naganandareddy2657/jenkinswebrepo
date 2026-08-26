@@ -1,4 +1,4 @@
-@Library('my-shared-library') _
+@Library('pipeline-library-demo@main') _
 
 cicdPipeline(
     applicationName: 'my-java-app',
