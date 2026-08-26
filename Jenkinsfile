@@ -5,6 +5,7 @@ pipeline {
     agent any
 
     parameters {
+
         string(
             name: 'APP_NAME',
             defaultValue: 'my-java-app',
@@ -33,14 +34,18 @@ pipeline {
     stages {
 
         stage('Run Shared CI/CD') {
+
             steps {
+
                 script {
+
                     cicdPipeline(
                         appName: params.APP_NAME,
                         environment: params.ENVIRONMENT,
                         dockerTag: params.DOCKER_TAG,
                         deploy: params.DEPLOY
                     )
+
                 }
             }
         }
