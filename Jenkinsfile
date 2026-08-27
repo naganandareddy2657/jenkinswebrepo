@@ -39,7 +39,7 @@ pipeline {
 
                 script {
 
-                    cicdPipeline(
+                    cicdK8spipeline(
                         appName: params.APP_NAME,
                         environment: params.ENVIRONMENT,
                         dockerTag: params.DOCKER_TAG,
